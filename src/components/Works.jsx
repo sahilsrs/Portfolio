@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { styles } from "../styles";
-import { personalInfo, projects } from "../constants";
+import { personalInfo, projects, navigationPaths } from "../constants";
 import { Tilt } from "react-tilt";
-import { demo } from "../assets";
+import { demo, web } from "../assets";
 
 const ProjectCard = ({
   index,
@@ -16,20 +16,25 @@ const ProjectCard = ({
   hosted_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.4, 0.75)}>
       <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        options={{ max: 30, scale: 1.02, speed: 450 }}
+        className="glass-panel p-5 rounded-2xl sm:w-[360px] w-full border border-white/10"
       >
         <div
-          className="relative w-full h-[230px] cursor-pointer"
+          className="relative w-full h-[200px] xs:h-[230px] cursor-pointer group"
           onClick={() => window.open(hosted_link, "_blank")}
         >
           <img
             src={image}
-            alt="project-image"
+            alt="project-preview"
             className="w-full h-full object-cover rounded-2xl"
+            onError={(e) => {
+              e.currentTarget.src = web;
+            }}
           />
+
+          <div className="absolute inset-0 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
@@ -38,7 +43,7 @@ const ProjectCard = ({
             >
               <img
                 src={demo}
-                alt="source-code"
+                alt="open-project"
                 className="w-1/2 h-1/2 object-contain"
               />
             </div>
@@ -46,15 +51,15 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <h3 className="text-white font-bold text-[22px] leading-snug">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px] leading-6">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[13px] ${tag.color}`}
             >
               #{tag.name}
             </p>
@@ -91,4 +96,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, navigationPaths.work);

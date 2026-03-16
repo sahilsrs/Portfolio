@@ -22,6 +22,7 @@ const ExperienceCard = ({ experience }) => {
         <a
           href={experience.company_website}
           target="_blank"
+          rel="noreferrer"
           className="flex justify-center items-center w-full h-full"
         >
           <img
@@ -35,9 +36,11 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-white text-[20px] sm:text-[24px] font-bold">
+          {experience.title}
+        </h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-secondary text-[14px] sm:text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -66,8 +69,8 @@ const Experience = () => {
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+      <div className="mt-12 sm:mt-20 flex flex-col">
+        <VerticalTimeline layout="1-column-left">
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
@@ -80,4 +83,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, navigationPaths.work);
+export default SectionWrapper(Experience, "experience");

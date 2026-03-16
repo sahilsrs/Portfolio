@@ -1,0 +1,16 @@
+<svg width="900" height="600" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0B1020"/>
+  <circle cx="760" cy="120" r="180" fill="#A78BFA" fill-opacity="0.22"/>
+  <circle cx="180" cy="520" r="220" fill="#60A5FA" fill-opacity="0.18"/>
+  <rect x="100" y="140" width="700" height="340" rx="24" fill="#121A36" stroke="#32406C"/>
+  <rect x="140" y="190" width="280" height="240" rx="16" fill="#1F2A4D"/>
+  <rect x="460" y="198" width="290" height="26" rx="10" fill="#31467C"/>
+  <rect x="460" y="240" width="250" height="18" rx="8" fill="#3E5A93"/>
+  <rect x="460" y="272" width="220" height="18" rx="8" fill="#3E5A93"/>
+  <rect x="460" y="314" width="180" height="48" rx="12" fill="#8B5CF6"/>
+  <path d="M212 280C212 252 234 230 262 230C290 230 312 252 312 280V338H212V280Z" fill="#93C5FD"/>
+  <rect x="242" y="346" width="40" height="54" rx="12" fill="#93C5FD"/>
+  <path d="M338 262L380 288L338 314V262Z" fill="#22D3EE"/>
+  <text x="128" y="106" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="42" font-weight="700">AI Interview Prep</text>
+  <text x="128" y="512" fill="#C4B5FD" font-family="Arial, sans-serif" font-size="28">Mock Voice Interviews • Feedback • Analytics</text>
+</svg>

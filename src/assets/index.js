@@ -36,6 +36,10 @@ import zealWeb from "./projects/zealWeb.png";
 import zealApp from "./projects/zealApp.png";
 import rollWeb from "./projects/rollWeb.png";
 import rollApp from "./projects/rollApp.png";
+import terracartCover from "./projects/terracartCover.svg";
+import interviewAICover from "./projects/interviewAICover.svg";
+import dashboardCover from "./projects/dashboardCover.svg";
+import deploymentCover from "./projects/deploymentCover.svg";
 
 export {
   logo,
@@ -74,4 +78,8 @@ export {
   zealApp,
   rollWeb,
   rollApp,
+  terracartCover,
+  interviewAICover,
+  dashboardCover,
+  deploymentCover,
 };

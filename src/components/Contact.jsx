@@ -51,7 +51,7 @@ const Contact = () => {
         () => {
           setModalContent({
             title: "Success!",
-            message: "Thank you. I will get back to you as soon as possilbe.",
+            message: "Thank you. I will get back to you as soon as possible.",
             buttonText: "Ok",
           });
           setIsModalVisible(true);
@@ -81,9 +81,9 @@ const Contact = () => {
       <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="relative flex-[0.75] bg-black-100 p-8 rounded-2xl"
+          className="relative flex-[0.75] glass-panel p-6 sm:p-8 rounded-2xl border border-white/10"
         >
-          <div className="flex items-center justify-end space-x-4 absolute top-8 right-4">
+          <div className="flex items-center justify-start sm:justify-end space-x-4 sm:absolute sm:top-8 sm:right-4 mb-4 sm:mb-0">
             {Object.keys(publicUrls.socialProfiles).map((socialProfile) => {
               const profile = publicUrls.socialProfiles[socialProfile];
               return (
@@ -104,15 +104,9 @@ const Contact = () => {
 
           <p className={styles.sectionSubText}>Get in touch</p>
           <h3 className={styles.sectionHeadText}>Contact.</h3>
-          <p className={`${styles.sectionSubText} lowercase`}>
-            {personalInfo.email}
-          </p>
+          <p className={`${styles.sectionSubText} lowercase`}>{personalInfo.email}</p>
 
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="mt-12 flex flex-col gap-8"
-          >
+          <form ref={formRef} onSubmit={handleSubmit} className="mt-10 sm:mt-12 flex flex-col gap-6 sm:gap-8">
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name</span>
               <input
@@ -121,7 +115,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your good name?"
-                className="bg-tertiary py-4 px-6 text-white placeholder:text-secondary rounded-lg outline-none border-none font-medium"
+                className="bg-tertiary py-4 px-6 text-white placeholder:text-secondary rounded-lg outline-none border border-white/10 font-medium"
               />
             </label>
 
@@ -132,8 +126,8 @@ const Contact = () => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your web address?"
-                className="bg-tertiary py-4 px-6 text-white placeholder:text-secondary rounded-lg outline-none border-none font-medium"
+                placeholder="What's your email address?"
+                className="bg-tertiary py-4 px-6 text-white placeholder:text-secondary rounded-lg outline-none border border-white/10 font-medium"
               />
             </label>
 
@@ -144,23 +138,23 @@ const Contact = () => {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="What's you want to say?"
-                className="bg-tertiary py-4 px-6 text-white placeholder:text-secondary rounded-lg outline-none border-none font-medium"
+                placeholder="What do you want to discuss?"
+                className="bg-tertiary py-4 px-6 text-white placeholder:text-secondary rounded-lg outline-none border border-white/10 font-medium"
               />
             </label>
 
             <button
               type="submit"
-              className="bg-tertiary py-3 px-8 rounded-xl outline-none text-white font-bold w-fit shadow-md shadow-primary"
+              className="bg-electric-purple py-3 px-8 rounded-xl outline-none text-white font-bold w-fit shadow-md shadow-primary hover:opacity-90 transition-opacity"
             >
-              {loading ? "Sending..." : "Send"}
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </motion.div>
 
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[280px] xs:h-[350px]"
         >
           <EarthCanvas />
         </motion.div>

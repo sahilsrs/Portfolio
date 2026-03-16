@@ -4,31 +4,15 @@ import {
   creator,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
-  nextJs,
-  redux,
-  tailwind,
-  angular,
   nodejs,
   mongodb,
-  java,
-  mysql,
-  git,
-  monster,
-  crmnext,
-  nickelfox,
-  newgen,
-  skillrisers,
-  proximus,
-  aptihealthWeb,
-  aptihealthApp,
-  zealWeb,
-  zealApp,
-  rollWeb,
-  rollApp,
+  terracartCover,
+  interviewAICover,
+  dashboardCover,
+  deploymentCover,
   linkedIn,
   github,
 } from "../assets";
@@ -37,6 +21,7 @@ const navigationPaths = {
   home: "/",
   about: "about",
   work: "work",
+  education: "education",
   contact: "contact",
 };
 
@@ -50,6 +35,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: navigationPaths.education,
+    title: "Education",
+  },
+  {
     id: navigationPaths.contact,
     title: "Contact",
   },
@@ -57,20 +46,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "React Developer",
+    title: "MERN Full Stack Development",
     icon: web,
   },
   {
-    title: "NextJs Developer",
-    icon: creator,
+    title: "REST API and Authentication",
+    icon: backend,
   },
   {
-    title: "React Native Developer",
+    title: "Responsive React Frontend",
     icon: mobile,
   },
   {
-    title: "NodeJs Developer",
-    icon: backend,
+    title: "AWS EC2 Deployment",
+    icon: creator,
   },
 ];
 
@@ -84,32 +73,12 @@ const technologies = [
     icon: css,
   },
   {
-    name: "JavaScript",
+    name: "JavaScript (ES6+)",
     icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
   },
   {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Next JS",
-    icon: nextJs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Angular",
-    icon: angular,
   },
   {
     name: "Node JS",
@@ -119,267 +88,219 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Java",
-    icon: java,
-  },
-  {
-    name: "MySQL",
-    icon: mysql,
-  },
-  {
-    name: "Git",
-    icon: git,
-  },
+];
+
+const additionalTechnologies = [
+  "Express.js",
+  "REST API Development",
+  "Authentication",
+  "AWS EC2",
+  "Nginx",
+  "SSL",
+  "Linux",
+  "Git",
+  "GitHub",
+  "Responsive Design",
+];
+
+const quickStats = [
+  { label: "Years Experience", value: "1+" },
+  { label: "Projects Delivered", value: "10+" },
+  { label: "UI Performance Boost", value: "25%" },
+  { label: "Degree", value: "MCA" },
+];
+
+const highlights = [
+  "Production-ready MERN applications",
+  "Secure authentication and API architecture",
+  "Accessibility and voice-assisted UX focus",
+  "Cloud deployment with AWS EC2 and Nginx",
 ];
 
 const experiences = [
   {
-    title: "Software Engineer II",
-    company_name: "Monster + CareerBuilder",
-    company_website: "https://www.linkedin.com/company/monster/about/",
-    icon: monster,
+    title: "Full Stack Developer",
+    company_name: "Inventors Pvt Ltd, Nashik",
+    company_website: "https://github.com/sahilshaikh7454",
+    icon: web,
     iconBg: "#E6DEDD",
-    date: "Feb 2025 - Present",
+    date: "Jan 2025 - Feb 2026",
     points: [
-      "Enhanced the employer job portal with job posting, applicant tracking, multi-user access, and subscription model.",
-      "Integrated AI-Agents for job posting, applicant insights, job-candidate matching reducing recruiter effort by 80%.",
-      "Worked on AI Interview Agent to schedule automated interviews, targeting a 50% reduction in recruiter efforts.",
-      "Worked across AWS (Lambda, SQS, SNS, S3, KDS, DynamoDB, Elasticsearch) and monitoring tools like Splunk.",
+      "Developed and deployed full-stack MERN applications for real-world business use cases.",
+      "Built reusable React components and improved UI performance by 25%.",
+      "Designed and implemented secure RESTful APIs with authentication and middleware.",
+      "Deployed and maintained production apps on AWS EC2 using Nginx and SSL.",
     ],
   },
   {
-    title: "Software Engineer",
-    company_name: "Crmnext",
-    company_website: "https://www.businessnext.com/crm",
-    icon: crmnext,
+    title: "Frontend Developer Intern",
+    company_name: "Netleap Training Solution",
+    company_website: "https://github.com/sahilshaikh7454",
+    icon: mobile,
     iconBg: "#E6DEDD",
-    date: "Nov 2023 - Dec 2024",
+    date: "Jul 2024 - Aug 2024",
     points: [
-      "Developed Flow and Layout Designers for HDFC, PNB, IOB, and Utkarsh Bank.",
-      "Boosted team efficiency by 50% by implementing monorepo architecture and reusable Design-System.",
-      "Integrated GenAI models to automate flow creation from user prompts, eliminating manual configuration efforts.",
-      "Integrated unit testing with 80% code coverage, enhancing code reliability and reducing bugs.",
+      "Developed responsive UI components using modern frontend technologies.",
+      "Improved user experience and optimized interface performance.",
+      "Collaborated with mentors and peers to deliver pixel-accurate screens.",
+      "Supported component reuse and consistency across training projects.",
     ],
   },
   {
-    title: "Software Engineer",
-    company_name: "Nickelfox Technologies",
-    company_website: "https://www.nickelfox.com/",
-    icon: nickelfox,
+    title: "Freelance MERN Developer",
+    company_name: "Independent Projects",
+    company_website: "https://github.com/sahilshaikh7454",
+    icon: backend,
     iconBg: "#E6DEDD",
-    date: "Jan 2022 - Nov 2023",
+    date: "Sep 2024 - Present",
     points: [
-      "Developing and maintaining web and mobile applications using React.js, React-native and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built business websites and dashboards with React, Node.js, and MongoDB.",
+      "Implemented login/authentication flows and role-based access for admin users.",
+      "Improved API response performance with query and middleware optimization.",
+      "Handled deployment, domain setup, SSL, and basic Linux server operations.",
     ],
   },
   {
-    title: "Software Developer",
-    company_name: "Newgen Software",
-    company_website: "https://newgensoft.com/home-india/",
-    icon: newgen,
+    title: "Academic Project Developer",
+    company_name: "MCA Capstone and Team Projects",
+    company_website: "https://github.com/sahilshaikh7454",
+    icon: creator,
     iconBg: "#E6DEDD",
-    date: "Mar 2021 - Dec 2021",
+    date: "2023 - 2025",
     points: [
-      "Developed a groundbreaking banking product for a Singapore-based firm, improved transaction management.",
-      "Developed a dynamic dashboard for efficient transaction management, resulting in a 30% increase in productivity.",
-      "Optimized frontend performance by achieving 20% reduction in page loading time and make it responsive.",
-      "Created a transaction report generator, reducing report generation time by 50% and enhancing data analysis.",
-    ],
-  },
-  {
-    title: "Software Engineer Intern",
-    company_name: "Skillrisers",
-    company_website: "https://www.skillrisers.com/",
-    icon: skillrisers,
-    iconBg: "#E6DEDD",
-    date: "Jan 2020 - Jul 2020",
-    points: [
-      "Contributed to the development of a Test Engine Application, empowering users to create and conduct tests seamlessly.",
-      "Built three essential modules: Teacher, Student, and Admin, ensuring comprehensive functionality for all user roles.",
-      "Collaborated effectively with the development team, actively participating in code reviews and resolving technical challenges.",
-      "Demonstrated strong problem-solving skills, consistently delivering high-quality code and meeting project deadlines.",
-    ],
-  },
-  {
-    title: "Frontend Developer",
-    company_name: "Self-employed",
-    company_website: "https://proximus.surge.sh/index.html",
-    icon: proximus,
-    iconBg: "#E6DEDD",
-    date: "Jan 2018 - Jan 2021",
-    points: [
-      "Spearheaded the development of a fully responsive website for the college coding society.",
-      "Led coding sessions, actively sharing knowledge and insights to enrich members' programming skills and understanding.",
-      "Organized informative sessions on cutting-edge technologies, including JavaScript and ReactJs.",
-      "Curated and designed challenging coding problems for college competitions.",
+      "Built inclusive and AI-assisted web applications as part of MCA project work.",
+      "Delivered voice-enabled and accessibility-focused user experiences.",
+      "Worked on end-to-end architecture from UI to API to cloud deployment.",
+      "Presented working prototypes and documentation with measurable outcomes.",
     ],
   },
 ];
 
 const projects = [
   {
-    name: "Aptihealth Web",
+    name: "TerraCart - Inclusive Smart Ordering Platform",
     description:
-      "Revolutionizing mental healthcare in New York State with a user-friendly platform for personalized therapy and progress tracking. Provides the digital gateway to comprehensive behavioral healthcare.",
+      "Accessibility-first ordering platform built with MERN. Features voice-based ordering, assistive UI patterns, multi-language support, and cloud deployment.",
+    tags: [
+      {
+        name: "mern",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "accessibility",
+        color: "green-text-gradient",
+      },
+      {
+        name: "aws",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: terracartCover,
+    hosted_link: "https://github.com/sahilshaikh7454",
+  },
+  {
+    name: "AI-Based Interview Preparation Platform",
+    description:
+      "Full-stack interview prep platform with voice-based mock interviews, real-time feedback workflows, authentication, and scalable API architecture.",
+    tags: [
+      {
+        name: "mern",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "speech-recognition",
+        color: "green-text-gradient",
+      },
+      {
+        name: "rest-api",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: interviewAICover,
+    hosted_link: "https://github.com/sahilshaikh7454",
+  },
+  {
+    name: "Business Operations Dashboard",
+    description:
+      "Admin dashboard for operational tracking with secure login, role-based modules, analytics cards, and optimized backend endpoints.",
     tags: [
       {
         name: "reactjs",
         color: "blue-text-gradient",
-      },
-      {
-        name: "redux",
-        color: "green-text-gradient",
       },
       {
         name: "nodejs",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: aptihealthWeb,
-    hosted_link: "https://www.aptihealth.com/",
-  },
-  {
-    name: "Aptihealth App",
-    description:
-      "Access top-notch mental healthcare anytime, anywhere in New York State with our innovative app. Track your progress, schedule appointments, and connect with expert therapists for personalized care.",
-    tags: [
-      {
-        name: "react-native",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "sendbird",
         color: "green-text-gradient",
       },
       {
-        name: "twilio",
+        name: "mongodb",
         color: "pink-text-gradient",
       },
     ],
-    image: aptihealthApp,
-    hosted_link: "https://apps.apple.com/us/app/aptihealth/id1477170874",
+    image: dashboardCover,
+    hosted_link: "https://github.com/sahilshaikh7454",
   },
   {
-    name: "Zeal Web",
+    name: "Portfolio and Deployment Toolkit",
     description:
-      "The Zeal website elevates the experience of enjoying activities with trusted friends, fostering connections and making every interaction exciting.",
+      "Production-ready portfolio setup with CI-friendly build flow, server configuration guidance, Nginx reverse proxy, and SSL-ready deployment notes.",
     tags: [
       {
-        name: "reactjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "typescript",
+        name: "nginx",
         color: "green-text-gradient",
       },
       {
-        name: "firebase",
+        name: "aws-ec2",
         color: "pink-text-gradient",
       },
     ],
-    image: zealWeb,
-    hosted_link: "https://getzeal.co/",
+    image: deploymentCover,
+    hosted_link: "https://github.com/sahilshaikh7454",
+  },
+];
+
+const education = [
+  {
+    degree: "Master of Computer Applications (MCA)",
+    institute: "SPPU University",
+    year: "2023 - 2025",
+    score: "CGPA: 8.14 / 10",
   },
   {
-    name: "Zeal App",
-    description:
-      "Discover a world of activities with friends through Zeal, an engaging platform. Create events, post updates, chat, and enjoy in-person activities hassle-free. Boost your social life with Zeal!",
-    tags: [
-      {
-        name: "react-native",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "sendgrid",
-        color: "green-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: zealApp,
-    hosted_link:
-      "https://apps.apple.com/us/app/zeal-activities-with-friends/id6446917140",
-  },
-  {
-    name: "Roll Web",
-    description:
-      "The Roll website is the gateway to the future of decentralized communities and digital assets. It allows users to seamlessly earn, redeem, send, and trade social tokens.",
-    tags: [
-      {
-        name: "reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "formik",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: rollWeb,
-    hosted_link: "https://app.tryroll.com/",
-  },
-  {
-    name: "Roll App",
-    description:
-      "Join the future of decentralized communities and digital assets with Roll. Earn, redeem, send, and trade social tokens on this innovative platform. Experience transparent transactions and captivating UI design.",
-    tags: [
-      {
-        name: "react-native-web",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "storybook",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: rollApp,
-    hosted_link:
-      "https://play.google.com/store/apps/details?id=com.roll&hl=en_GB",
+    degree: "Bachelor of Computer Applications (BCA)",
+    institute: "SPPU University",
+    year: "2020 - 2023",
+    score: "CGPA: 8.10 / 10",
   },
 ];
 
 const personalInfo = {
-  name: "Shridhar",
-  fullName: "Shridhar Rai",
-  email: "raishridhar619@gmail.com",
-  mobile: "9319751819",
-  role: "Senior Software Developer",
-  about: `I'm a skilled software developer with experience in TypeScript and
-  JavaScript, and expertise in frameworks like React.Js, Next.Js, React-naitve,
-  Node.js etc. I'm a quick learner and collaborate closely with clients to
-  create efficient, scalable, and user-friendly solutions that solve
-  real-world problems. Let's work together to bring your ideas to life!`,
-  projectsIntro: `Following projects showcases my skills and experience through
-  real-world examples of my work. Each project is briefly described with
-  live demos. It reflects my ability to solve complex problems, work
-  with different technologies, and manage projects effectively.`,
+  name: "Sahil",
+  fullName: "Sahil Shaikh",
+  email: "sahilshaikh7454@gmail.com",
+  mobile: "+91 9970967486",
+  location: "Nashik, Maharashtra",
+  role: "Full Stack MERN Developer",
+  availability: "Open to full-time and freelance opportunities",
+  about: `I am a Full Stack MERN Developer with 1+ year of experience building scalable and user-focused web applications. I work across React.js, Node.js, Express.js, and MongoDB, with hands-on deployment experience on AWS EC2 using Nginx and SSL. I enjoy building secure APIs, improving performance, and delivering clean responsive interfaces for real-world products. I completed my MCA from SPPU University with a CGPA of 8.14 and continue to build practical, high-impact solutions.`,
+  projectsIntro: `These projects reflect my MERN stack development experience, from accessibility-focused product design to AI-assisted interview workflows. They highlight practical work in frontend engineering, backend API development, authentication, cloud deployment, and performance optimization.`,
 };
 
 const publicUrls = {
-  resume:
-    "https://drive.google.com/file/d/1cbDow8j2FWFH71fGGYyypBN5ObvFSK0G/view?usp=sharing",
+  resume: "/Sahil_Shaikh_Resume.pdf",
   socialProfiles: {
     linkedin: {
       title: "linkedin",
-      link: "https://www.linkedin.com/in/shridharrai/",
+      link: "https://www.linkedin.com/in/sahil-shaikh/",
       icon: linkedIn,
     },
     github: {
       title: "github",
-      link: "https://github.com/shridharrai",
+      link: "https://github.com/sahilshaikh7454",
       icon: github,
     },
   },
@@ -388,8 +309,12 @@ const publicUrls = {
 export {
   services,
   technologies,
+  additionalTechnologies,
+  quickStats,
+  highlights,
   experiences,
   projects,
+  education,
   navigationPaths,
   personalInfo,
   publicUrls,
